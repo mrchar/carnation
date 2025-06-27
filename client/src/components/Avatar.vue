@@ -1,7 +1,15 @@
+<script setup lang="ts">
+export type Props = {
+  alt?: string
+  src: string
+}
+
+const props = withDefaults(defineProps<Props>(), {alt: "Avatar"})
+</script>
 <template>
   <div class="avatar">
     <div class="w-16 rounded">
-      <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+      <img :alt="props.alt" :src="props.src"/>
     </div>
   </div>
 </template>

@@ -1043,6 +1043,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/luxon@npm:^3.6.2":
+  version: 3.6.2
+  resolution: "@types/luxon@npm:3.6.2"
+  checksum: 10c0/7572ee52b3d3e9dd10464b90561a728b90f34b9a257751cc3ce23762693dd1d14fa98b7f103e2efe2c6f49033331f91de5681ffd65cca88618cefe555be326db
+  languageName: node
+  linkType: hard
+
 "@types/web-bluetooth@npm:^0.0.21":
   version: 0.0.21
   resolution: "@types/web-bluetooth@npm:0.0.21"
@@ -1500,10 +1507,12 @@ __metadata:
   resolution: "client@workspace:."
   dependencies:
     "@tailwindcss/vite": "npm:^4.1.11"
+    "@types/luxon": "npm:^3.6.2"
     "@vitejs/plugin-vue": "npm:^6.0.0"
     "@vue/tsconfig": "npm:^0.7.0"
     "@vueuse/core": "npm:^13.4.0"
     daisyui: "npm:^5.0.43"
+    luxon: "npm:^3.6.1"
     pinia: "npm:^3.0.3"
     tailwindcss: "npm:^4.1.11"
     typescript: "npm:~5.8.3"
@@ -2292,6 +2301,13 @@ __metadata:
   dependencies:
     yallist: "npm:^3.0.2"
   checksum: 10c0/89b2ef2ef45f543011e38737b8a8622a2f8998cddf0e5437174ef8f1f70a8b9d14a918ab3e232cb3ba343b7abddffa667f0b59075b2b80e6b4d63c3de6127482
+  languageName: node
+  linkType: hard
+
+"luxon@npm:^3.6.1":
+  version: 3.6.1
+  resolution: "luxon@npm:3.6.1"
+  checksum: 10c0/906d57a9dc4d1de9383f2e9223e378c298607c1b4d17b6657b836a3cd120feb1c1de3b5d06d846a3417e1ca764de8476e8c23b3cd4083b5cdb870adcb06a99d5
   languageName: node
   linkType: hard
 
