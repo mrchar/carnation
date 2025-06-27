@@ -1,7 +1,7 @@
 <template>
   <div class="drawer drawer-end">
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content">
+    <div class="drawer-content h-full border-l border-base-200 shadow-sm">
       <!-- Page content here -->
       <label for="my-drawer-4" class="drawer-button btn btn-primary">
         T

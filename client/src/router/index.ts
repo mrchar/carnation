@@ -1,32 +1,20 @@
-import type {RouteRecordRaw} from "vue-router"
 import {createRouter, createWebHistory} from "vue-router";
+import routes from "./routes";
+import {useUserStore} from "../store/user.ts";
 
+const needNotAuthentication = ["Login"]
 
-const routes: RouteRecordRaw[] = [
-    {name: "Root", path: "/", redirect: "/console"},
-    {
-        name: "Console",
-        path: "/console",
-        component: () => import("../views/Console.vue")
-    },
-    {
-        name: "Messages",
-        path: "/messages",
-        component: () => import("../views/Messages.vue")
-    },
-    {
-        name: "Teams",
-        path: "/teams",
-        component: () => import("../views/Teams.vue")
-    },
-    {
-        name: "Projects",
-        path: "/projects",
-        component: () => import("../views/Projects.vue")
-    }
-];
-
-export default createRouter({
+const router = createRouter({
     history: createWebHistory(),
     routes: routes,
 });
+
+router.beforeEach((to, from) => {
+    const store = useUserStore()
+    const authenticated = !!store.user.id.length
+    if (!needNotAuthentication.includes(to.name) && !authenticated) {
+        return {name: "Login", query: {referer: to.path}}
+    }
+})
+
+export default router;

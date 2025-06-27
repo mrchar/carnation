@@ -19,7 +19,7 @@ const props = defineProps<Props>()
   <div class="chat"
        :class="props.incoming ? 'chat-start' : 'chat-end'"
   >
-    <Avatar class="chat-image" :src="props.sender.avatar"/>
+    <Avatar class="chat-image w-10" :src="props.sender.avatar"/>
     <div class="chat-header">
       {{ props.sender.name }}
       <time class="text-xs opacity-50">

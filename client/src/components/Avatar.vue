@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<Props>(), {alt: "Avatar"})
 </script>
 <template>
   <div class="avatar">
-    <div class="w-16 rounded">
+    <div class="rounded">
       <img :alt="props.alt" :src="props.src"/>
     </div>
   </div>

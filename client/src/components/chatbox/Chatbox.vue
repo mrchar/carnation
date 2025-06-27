@@ -28,5 +28,7 @@ const parsedMessages = computed(() => {
 </script>
 
 <template>
-  <ChatBubble v-for="item in parsedMessages" :key="item.id" v-bind="item"/>
+  <div>
+    <ChatBubble v-for="item in parsedMessages" :key="item.id" v-bind="item"/>
+  </div>
 </template>
